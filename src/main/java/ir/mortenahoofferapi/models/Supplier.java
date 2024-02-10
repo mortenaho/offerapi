@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Entity
 @Data
-class Supplier {
+public class Supplier {
     String fullname;
     String mobile;
     String address;

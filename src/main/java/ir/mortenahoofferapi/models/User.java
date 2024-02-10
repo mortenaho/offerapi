@@ -11,12 +11,12 @@ import java.util.Date;
 @Entity
 @Data
 public class User {
-    String Username;
-    String Password;
-    String Email;
-    Boolean IsActive;
+    String username;
+    String password;
+    String email;
+    Boolean isActive;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long UserId;
-    Date CreatedDate;
+    long userId;
+    Date createdDate;
 }
