@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -13,9 +14,9 @@ class Supplier {
     String mobile;
     String address;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     long supplierId ;
     Date createdDate;
-    @OneToMany(mappedBy="Supplier")
-    private Set<Product> products;
+    @OneToMany(mappedBy="supplier",fetch = FetchType.LAZY)
+    List<Product> products;
 }

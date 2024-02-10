@@ -16,7 +16,7 @@ public class Product {
     int offer;
     String endDate;
     Date createdDate;
-    @ManyToOne
-    @JoinColumn(name="supplierId", nullable=false)
-    private Supplier supplier;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="supplierId")
+    Supplier supplier;
 }
