@@ -30,8 +30,6 @@ public class UserController {
             response.ResponseMessage = "login failed";
             response.ResponseCode = 401;
         }
-
-
         return response;
     }
 }
